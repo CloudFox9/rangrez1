@@ -18,6 +18,6 @@ from django.urls import path
 from restraunt import views
 urlpatterns = [
     path('', views.rangrez),
-    path('post/',views.requestfillform,'contact'),
-    path('book/',views.bookTable,'booking')
+    path('post/',views.requestfillform,name='contact'),
+    path('book/',views.bookTable,name='booking')
 ]
