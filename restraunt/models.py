@@ -6,7 +6,8 @@ class Message(models.Model):
     email = models.EmailField()
     subject = models.CharField(max_length=90)
     body = models.CharField(max_length=1000)
-
+    def __str__(self):
+        return self.email
 
 class Booking(models.Model):
     name = models.CharField(max_length=200)
@@ -16,3 +17,5 @@ class Booking(models.Model):
     date = models.DateField()
     time = models.CharField(max_length=20)
     message = models.CharField(max_length=1000)
+    def __str__(self):
+        return self.email
